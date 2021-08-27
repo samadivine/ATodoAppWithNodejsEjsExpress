@@ -1,0 +1,30 @@
+<%- include("header") -%>
+    <div class="box" id="heading">
+        <h1>
+            <%= day %>
+        </h1>
+    </div>
+
+    <div class="box" id="heading1">
+        <h1>Hello Beautiful What's The Plan For Today</h1>
+    </div>
+    <div class="box">
+        <%todoList.forEach(todos=>{%>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%=todos%>
+                </P>
+            </div>
+            <% }) %>
+
+
+                <form action="/" method="POST" class="item">
+                    <input type="text" name="todoList" placeholder="Add A Todo" autocomplete="off">
+                    <button type="submit">+</button>
+                </form>
+    </div>
+
+
+
+    <%- include("header") -%>
